@@ -1,0 +1,55 @@
+mat-slider {
+  width: 300px;
+}
+
+.mat-slider-horizontal {
+  width: 300px;
+}
+
+.mat-slider-vertical {
+  height: 300px;
+}
+
+.mat-card + .mat-card {
+  margin-top: 8px;
+}
+
+.example-result-card h2 {
+  margin: 0 8px;
+}
+
+
+main {
+  margin:auto;
+  width:500px;
+  margin-top:5em;
+  text-align:center;
+}
+
+
+.yes {
+  float: right;
+}
+
+.no {
+  float: left;
+}
+
+
+#clickBox {
+  margin-top:2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 3em;
+  height:100px;
+
+}
+
+#clickBox div {
+  padding:1em;
+}
+
+#clickBox div:hover {
+  cursor:pointer;
+  background-color: #9ac2d2;
+}

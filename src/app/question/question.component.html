@@ -1,1 +1,42 @@
-<p>question works!</p>
+<h2>{{ question.category }}</h2>
+<h3>{{ question.title }}</h3>
+
+
+<main>
+  <p>{{ question.text }}</p>
+
+  <div *ngIf="question.isSlider">
+    <mat-slider
+      class="example-margin"
+      [invert]="invert"
+      [max]="max"
+      [min]="min"
+      [step]="step"
+      [thumbLabel]="thumbLabel"
+      [tickInterval]="getSliderTickInterval()"
+      [(ngModel)]="value"
+      [vertical]="vertical">
+    </mat-slider>
+
+    <div>
+      <div class="no">No</div>
+      <div class="yes">Yes</div>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+
+
+
+  <div *ngIf="question.isClickbox">
+    <div id="clickBox">
+      <div *ngFor="let content of question.clickBoxContent">{{content }}</div>
+    </div>
+  </div>
+
+</main>
+
+
+<div class="action actionRight">
+  <button mat-raised-button color="primary" (click)="save(1)" *ngIf="!question.final">Save</button><br /><br />
+  <button mat-raised-button color="primary" routerLink="/evaluation" *ngIf="question.final">Evaluate</button>
+</div>
