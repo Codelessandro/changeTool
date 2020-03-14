@@ -7,7 +7,7 @@ export class Question {
   isSlider: boolean;
   isClickbox: boolean;
   final: boolean;
-  clickBoxContent?: [];
+  clickBoxContent?: string[];
 }
 
 @Injectable({
