@@ -1,0 +1,17 @@
+.dimensions {
+  margin-top:5em;
+}
+
+.dimensions div {
+  marign:2em;
+  float: left;
+  width:50%;
+  text-align: center;
+  height:100px;
+  padding-top:2em;
+}
+
+.dimensions div:hover {
+  cursor:pointer;
+  background-color: #9ac2d2;
+}
