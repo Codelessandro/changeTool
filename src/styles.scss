@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-
+@import "theme";
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -53,13 +52,26 @@ header {
   grid-area: content;
 }
 
+.action {
+  position: absolute;
+  bottom:2em;
+}
+
+.actionLeft {
+  left: 2em;
+}
 
 .actionRight {
-  text-align: right
+  right: 2em;
 }
 
 .action button {
   font-weight:bold;
   color: #d8047b;
 }
+
+
+
+
+
 
