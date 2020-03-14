@@ -6,6 +6,7 @@ import { IntroComponent } from './intro/intro.component';
 import { ChooseComponent } from './choose/choose.component';
 import { QuestionComponent } from './question/question.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EvaluationComponent } from './evaluation/evaluation.component';
     EvaluationComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
