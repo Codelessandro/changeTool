@@ -10,6 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { RouterModule, Routes } from '@angular/router';
+import {MatSliderModule} from '@angular/material/slider';
+import {FormsModule} from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 const appRoutes: Routes = [
@@ -30,10 +35,15 @@ const appRoutes: Routes = [
     EvaluationComponent
   ],
   imports: [
+    MatProgressBarModule,
+    MatDividerModule,
+    MatRadioModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
+    FormsModule,
+    MatSliderModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
