@@ -37,6 +37,10 @@ header {
   grid-area: logo;
 }
 
+.logo img {
+  width: 150px;
+}
+
 .content {
   grid-area: content;
 }
