@@ -16,6 +16,8 @@ const appRoutes: Routes = [
   { path: 'home', component: IntroComponent },
   { path: '', component: IntroComponent },
   { path: 'choose', component: ChooseComponent },
+  { path: 'question', component: QuestionComponent },
+  { path: 'evaluation', component: EvaluationComponent },
 ];
 
 
