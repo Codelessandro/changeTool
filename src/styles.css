@@ -16,7 +16,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   /*this to solve "the content will not be cut when the window is smaller than the content": */
   max-width:100%;
   max-height:100%;
-  overflow:auto;
 }
 
 #page {
@@ -25,6 +24,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   "head logo"
   "content content";
   grid-template-rows: 1fr 5fr;
+  grid-row-gap: 2em;
   grid-template-columns: 4fr 1fr;
 }
 
@@ -43,4 +43,14 @@ header {
 
 .content {
   grid-area: content;
+}
+
+
+.actionRight {
+  text-align: right
+}
+
+.action button {
+  font-weight:bold;
+  color: #d8047b;
 }
