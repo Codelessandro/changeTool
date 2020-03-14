@@ -5,10 +5,14 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+body {
+  background-color: lightgrey;
+
+}
 
 .center {
   width: 800px;
-  height: 600px;
+  height: 75vh;
 
   position:absolute; /*it can be fixed too*/
   left:0; right:0;
@@ -21,6 +25,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 #page {
+  padding:2em;
+  background-color: white;
   display: grid;
   grid-template-areas:
   "head logo"
@@ -56,3 +62,4 @@ header {
   font-weight:bold;
   color: #d8047b;
 }
+
