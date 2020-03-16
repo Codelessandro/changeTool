@@ -13,12 +13,12 @@ export class QuestionComponent implements OnInit {
   autoTicks = false;
   disabled = false;
   invert = false;
-  max = 100;
-  min = 0;
+  max = 4;
+  min = 1;
   showTicks = false;
   step = 1;
   thumbLabel = false;
-  value = 0;
+  value = 2.5;
   vertical = false;
   tickInterval = 1;
 
@@ -39,6 +39,10 @@ export class QuestionComponent implements OnInit {
 
   save() {
     this.question = this.questionService.question(1);
+  }
+
+  disableSave() {
+    return this.value == 2.5
   }
 
 
