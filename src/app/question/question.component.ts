@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Question, QuestionService} from '../question.service';
+import {StateService} from '../state.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-question',
@@ -22,12 +24,18 @@ export class QuestionComponent implements OnInit {
   vertical = false;
   tickInterval = 1;
 
-  constructor(private questionService: QuestionService) {
-    this.question = this.questionService.question(0);
+  constructor( private route: ActivatedRoute, private router: Router, private questionService: QuestionService, private stateService: StateService) {
+    this.question = this.questionService.question(1);
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.question = this.questionService.question(+params.get('id'));
+    });
   }
+
+
+
 
   getSliderTickInterval(): number | 'auto' {
     if (this.showTicks) {
@@ -37,12 +45,26 @@ export class QuestionComponent implements OnInit {
     return 0;
   }
 
-  save() {
-    this.question = this.questionService.question(1);
+  save(number, answer) {
+    this.stateService.addQuestion(number, answer);
+
+    alert(this.question.index)
+
+    if(this.question.index==16) {
+      this.router.navigate(['/evaluation']);
+    } else if  (!(this.question.index % 4 === 0)) {
+      const next_number = this.question.index + 1
+      this.value = 2.5
+      this.question = this.questionService.question(next_number);
+    } else {
+      this.router.navigate(['/choose']);
+
+    }
+
   }
 
   disableSave() {
-    return this.value == 2.5
+    return this.value == 2.5;
   }
 
 

@@ -37,6 +37,5 @@
 
 
 <div class="action actionRight">
-  <button mat-raised-button color="primary" [disabled]='disableSave()' (click)="save()" *ngIf="!question.final">Save</button><br /><br />
-  <button mat-raised-button color="primary" routerLink="/evaluation" *ngIf="question.final">Evaluate</button>
+  <button mat-raised-button color="primary" [disabled]='disableSave()' (click)="save(question.number, value)">Next</button><br /><br />
 </div>
