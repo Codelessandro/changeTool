@@ -1,27 +1,24 @@
 <h2>Please click on the dimension you want to start the assesement</h2>
 
 
-<div class="dimensions">
-  <div routerLink="/question/1">
-    Insight & Motivation
+
+<div class="dimensions" >
+  <div (click)="goToQuestion(i+1+(i*3), d[1])"  *ngFor="let d of dimensions; let i = index">
+    {{ d[0] }}
+    <span *ngIf="d[1]==true">
+          <br />
+          -bereits ausgefüllt -
+    </span>
+
   </div>
 
-  <div routerLink="/question/5">
-    Skills & Talent
-  </div>
 
-  <div routerLink="/question/9">
-    Culture
-  </div>
 
-  <div routerLink="/question/13">
-    System Processes & Structure
-  </div>
+
 
 </div>
 
 <div style="clear:both"></div>
-
 <br/>
 <br/>
 <br/>
