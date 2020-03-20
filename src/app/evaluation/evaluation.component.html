@@ -1,22 +1,7 @@
 <h2>Evaluation</h2>
 
 
-<div>
-  <h3>Culture Value</h3>
-  <mat-progress-bar class="example-margin"  [value]="value1"></mat-progress-bar>
-</div>
-
-<div>
-  <h3>Speed</h3>
-  <mat-progress-bar class="example-margin"  [value]="value2"></mat-progress-bar>
-</div>
-
-<div>
-  <h3>Performance</h3>
-  <mat-progress-bar class="example-margin"  [value]="value1"></mat-progress-bar>
-</div>
-
-<div>
-  <h3>Usability</h3>
-  <mat-progress-bar class="example-margin"  [value]="value1"></mat-progress-bar>
+<div *ngFor="let d of dimensions">
+  <h3>{{ d[0] }}</h3>
+  <mat-progress-bar class="example-margin"  [value]="d[1]*(100/16)"></mat-progress-bar>
 </div>
