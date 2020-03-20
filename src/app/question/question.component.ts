@@ -45,11 +45,8 @@ export class QuestionComponent implements OnInit {
     return 0;
   }
 
-  save(number, answer) {
-    this.stateService.addQuestion(number, answer);
-
-    alert(this.question.index)
-
+  save(number, answer, category) {
+    this.stateService.addQuestion(number, answer, category);
     if(this.question.index==16) {
       this.router.navigate(['/evaluation']);
     } else if  (!(this.question.index % 4 === 0)) {

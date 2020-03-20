@@ -9,12 +9,13 @@ export class StateService {
   }
 
 
-  questionsAnswered: [] = [];
+  questionsAnswered = [];
 
-  addQuestion(questionId: number, answer: number) {
+  addQuestion(questionId: number, answer: number, category: string) {
     this.questionsAnswered.push([
       questionId,
-      answer
+      answer,
+      category
     ]);
     console.log(this.questionsAnswered)
   }

@@ -26,16 +26,17 @@
   </div>
 
 
-
+  <!--
   <div *ngIf="question.isClickbox">
     <div id="clickBox">
       <div *ngFor="let content of question.clickBoxContent">{{content }}</div>
     </div>
   </div>
+  -->
 
 </main>
 
 
 <div class="action actionRight">
-  <button mat-raised-button color="primary" [disabled]='disableSave()' (click)="save(question.number, value)">Next</button><br /><br />
+  <button mat-raised-button color="primary" [disabled]='disableSave()' (click)="save(question.index, value, question.category)">Next</button><br /><br />
 </div>
